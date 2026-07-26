@@ -76,6 +76,145 @@ const common = {
   marketReaction: "",
 };
 
+const marketHolidaySources = {
+  china: {
+    market: "A股",
+    countryOrRegion: "中国",
+    publisher: "上海证券交易所 / 深圳证券交易所",
+    timezone: "Asia/Shanghai",
+    offset: "+08:00",
+    sourceUrl: "https://www.sse.com.cn/disclosure/dealinstruc/closed/c/c_20251222_10802510.shtml",
+    sourceName: "上海证券交易所2026年休市安排",
+  },
+  usa: {
+    market: "美股",
+    countryOrRegion: "美国",
+    publisher: "New York Stock Exchange",
+    timezone: "America/New_York",
+    offset: "-05:00",
+    sourceUrl: "https://www.nyse.com/trade/hours-calendars",
+    sourceName: "NYSE Holidays & Trading Hours",
+  },
+  hong_kong: {
+    market: "港股",
+    countryOrRegion: "中国香港",
+    publisher: "香港交易所",
+    timezone: "Asia/Hong_Kong",
+    offset: "+08:00",
+    sourceUrl: "https://www.hkex.com.hk/-/media/HKEX-Market/Services/Circulars-and-Notices/Participant-and-Members-Circulars/SEHK/2025/ce_SEHK_CT_075_2025.pdf",
+    sourceName: "香港证券市场2026年假期安排",
+  },
+  japan: {
+    market: "日股",
+    countryOrRegion: "日本",
+    publisher: "Japan Exchange Group",
+    timezone: "Asia/Tokyo",
+    offset: "+09:00",
+    sourceUrl: "https://www.jpx.co.jp/english/corporate/about-jpx/calendar/index.html",
+    sourceName: "Japan Exchange Group Market Holidays",
+  },
+  korea: {
+    market: "韩股",
+    countryOrRegion: "韩国",
+    publisher: "Korea Exchange",
+    timezone: "Asia/Seoul",
+    offset: "+09:00",
+    sourceUrl: "https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201T1.jsp",
+    sourceName: "KRX休市规则 / 韩国官方公休日历",
+  },
+};
+
+// Only exchange closures that fall on a normal Monday-Friday trading day are
+// listed. Weekends are intentionally omitted to keep the calendar readable.
+const marketHolidaysByYear = {
+  2026: [
+    ["china", "2026-01-01", "元旦"], ["china", "2026-01-02", "元旦假期"],
+    ["china", "2026-02-16", "春节"], ["china", "2026-02-17", "春节"],
+    ["china", "2026-02-18", "春节"], ["china", "2026-02-19", "春节"],
+    ["china", "2026-02-20", "春节"], ["china", "2026-02-23", "春节"],
+    ["china", "2026-04-06", "清明节"], ["china", "2026-05-01", "劳动节"],
+    ["china", "2026-05-04", "劳动节"], ["china", "2026-05-05", "劳动节"],
+    ["china", "2026-06-19", "端午节"], ["china", "2026-09-25", "中秋节"],
+    ["china", "2026-10-01", "国庆节"], ["china", "2026-10-02", "国庆节"],
+    ["china", "2026-10-05", "国庆节"], ["china", "2026-10-06", "国庆节"],
+    ["china", "2026-10-07", "国庆节"],
+
+    ["usa", "2026-01-01", "元旦"], ["usa", "2026-01-19", "马丁·路德·金纪念日"],
+    ["usa", "2026-02-16", "华盛顿诞辰纪念日"], ["usa", "2026-04-03", "耶稣受难日"],
+    ["usa", "2026-05-25", "阵亡将士纪念日"], ["usa", "2026-06-19", "六月节"],
+    ["usa", "2026-07-03", "美国独立日补休"], ["usa", "2026-09-07", "劳动节"],
+    ["usa", "2026-11-26", "感恩节"], ["usa", "2026-12-25", "圣诞节"],
+
+    ["hong_kong", "2026-01-01", "元旦"], ["hong_kong", "2026-02-17", "农历新年"],
+    ["hong_kong", "2026-02-18", "农历新年"], ["hong_kong", "2026-02-19", "农历新年"],
+    ["hong_kong", "2026-04-03", "耶稣受难日"], ["hong_kong", "2026-04-06", "清明节翌日"],
+    ["hong_kong", "2026-04-07", "复活节星期一翌日"], ["hong_kong", "2026-05-01", "劳动节"],
+    ["hong_kong", "2026-05-25", "佛诞翌日"], ["hong_kong", "2026-06-19", "端午节"],
+    ["hong_kong", "2026-07-01", "香港特别行政区成立纪念日"],
+    ["hong_kong", "2026-10-01", "国庆日"], ["hong_kong", "2026-10-19", "重阳节翌日"],
+    ["hong_kong", "2026-12-25", "圣诞节"],
+    ["hong_kong", "2026-02-16", "农历新年前夕", "half-day"],
+    ["hong_kong", "2026-12-24", "圣诞前夕", "half-day"],
+    ["hong_kong", "2026-12-31", "新年前夕", "half-day"],
+
+    ["japan", "2026-01-01", "元旦"], ["japan", "2026-01-02", "交易所假日"],
+    ["japan", "2026-01-12", "成人之日"], ["japan", "2026-02-11", "建国纪念日"],
+    ["japan", "2026-02-23", "天皇诞生日"], ["japan", "2026-03-20", "春分日"],
+    ["japan", "2026-04-29", "昭和之日"], ["japan", "2026-05-04", "绿色之日"],
+    ["japan", "2026-05-05", "儿童节"], ["japan", "2026-05-06", "宪法纪念日补休"],
+    ["japan", "2026-07-20", "海之日"], ["japan", "2026-08-11", "山之日"],
+    ["japan", "2026-09-21", "敬老日"], ["japan", "2026-09-22", "国民假日"],
+    ["japan", "2026-09-23", "秋分日"], ["japan", "2026-10-12", "体育日"],
+    ["japan", "2026-11-03", "文化日"], ["japan", "2026-11-23", "勤劳感谢日"],
+    ["japan", "2026-12-31", "交易所假日"],
+
+    ["korea", "2026-01-01", "元旦"], ["korea", "2026-02-16", "春节"],
+    ["korea", "2026-02-17", "春节"], ["korea", "2026-02-18", "春节"],
+    ["korea", "2026-03-02", "三一节补休"], ["korea", "2026-05-01", "劳动节"],
+    ["korea", "2026-05-05", "儿童节"], ["korea", "2026-05-25", "佛诞补休"],
+    ["korea", "2026-06-03", "全国地方选举日"], ["korea", "2026-07-17", "制宪节"],
+    ["korea", "2026-08-17", "光复节补休"], ["korea", "2026-09-24", "中秋节"],
+    ["korea", "2026-09-25", "中秋节"], ["korea", "2026-10-05", "开天节补休"],
+    ["korea", "2026-10-09", "韩文日"], ["korea", "2026-12-25", "圣诞节"],
+    ["korea", "2026-12-31", "年终休市"],
+  ],
+};
+
+function marketHolidayEvents(year) {
+  const today = dateOnly(shanghaiNow);
+  return (marketHolidaysByYear[year] || []).map(([sourceKey, date, holiday, session = "closed"]) => {
+    const source = marketHolidaySources[sourceKey];
+    const completed = date < today;
+    const halfDay = session === "half-day";
+    const marketDescription = sourceKey === "japan"
+      ? "JPX现金市场休市；部分衍生品可能另有假日交易安排，请查看JPX产品日历。"
+      : `${source.market}${halfDay ? "半日交易，且当日为非交收日" : "全天休市"}。`;
+    return {
+      ...common,
+      id: `market-holiday-${sourceKey}-${date}-${session}`,
+      seriesKey: `market-holiday-${sourceKey}`,
+      title: halfDay ? `${source.market}半日市：${holiday}` : `${source.market}休市：${holiday}`,
+      category: "market_rule",
+      countryOrRegion: source.countryOrRegion,
+      publisher: source.publisher,
+      scheduledDateTime: `${date}T09:00:00${source.offset}`,
+      timezone: source.timezone,
+      dateStatus: completed ? "completed" : "official_confirmed",
+      importance: "medium",
+      impactScope: [source.market, "跨市场流动性"],
+      frequency: "年度交易所日历",
+      usualReleasePattern: "交易所通常在上一年公布年度休市安排；临时调整以交易所最新公告为准。",
+      sourceUrl: source.sourceUrl,
+      sourceName: source.sourceName,
+      description: marketDescription,
+      outcomeSummary: completed ? `${date} ${marketDescription}` : "",
+      tags: [source.market, halfDay ? "半日市" : "休市", holiday, "交易所日历"],
+      createdAt: now.toISOString(),
+      updatedAt: now.toISOString(),
+    };
+  });
+}
+
 function monthlyEvents(year, month) {
   const key = `${year}-${pad(month + 1)}`;
   const make = (event) => ({
@@ -265,22 +404,48 @@ for (let offset = 0; offset <= horizonMonths; offset += 1) {
   const monthDate = new Date(windowStart.getFullYear(), windowStart.getMonth() + offset, 1);
   generated.push(...monthlyEvents(monthDate.getFullYear(), monthDate.getMonth()));
 }
+const officialMarketHolidays = [
+  ...marketHolidayEvents(windowStart.getFullYear()),
+  ...marketHolidayEvents(windowEnd.getFullYear()).filter(
+    (event) => !event.id.includes(`-${windowStart.getFullYear()}-`),
+  ),
+];
 
 const byId = new Map(existing.map((event) => [event.id, event]));
 let added = 0;
 let updated = 0;
-for (const candidate of generated) {
-  const eventDate = new Date(candidate.scheduledDateTime);
-  if (eventDate < windowStart || eventDate > windowEnd) continue;
+function mergeCandidate(candidate) {
   const current = byId.get(candidate.id);
   if (!current) {
     byId.set(candidate.id, candidate);
     added += 1;
-  } else if (!["official_confirmed", "completed"].includes(current.dateStatus)) {
-    const merged = { ...candidate, ...current, scheduledDateTime: candidate.scheduledDateTime, updatedAt: now.toISOString() };
+    return;
+  }
+  const becameCompleted =
+    candidate.category === "market_rule" &&
+    candidate.dateStatus === "completed" &&
+    current.dateStatus === "official_confirmed";
+  if (!["official_confirmed", "completed"].includes(current.dateStatus) || becameCompleted) {
+    const merged = {
+      ...candidate,
+      ...current,
+      dateStatus: becameCompleted ? "completed" : current.dateStatus,
+      outcomeSummary: becameCompleted ? candidate.outcomeSummary : current.outcomeSummary,
+      scheduledDateTime: candidate.scheduledDateTime,
+      updatedAt: now.toISOString(),
+    };
     if (JSON.stringify(merged) !== JSON.stringify(current)) updated += 1;
     byId.set(candidate.id, merged);
   }
+}
+
+for (const candidate of generated) {
+  const eventDate = new Date(candidate.scheduledDateTime);
+  if (eventDate < windowStart || eventDate > windowEnd) continue;
+  mergeCandidate(candidate);
+}
+for (const candidate of officialMarketHolidays) {
+  mergeCandidate(candidate);
 }
 
 const events = [...byId.values()].sort((a, b) => a.scheduledDateTime.localeCompare(b.scheduledDateTime));

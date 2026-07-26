@@ -1,2 +1,32 @@
-# market-signal-calendar-data
-Public financial calendar data and scheduled official-source update workflows for 市场曜历
+# 市场曜历公开数据
+
+本仓库为[市场曜历](https://market-signal-calendar-2026.qizh2012.chatgpt.site)提供公开、可审计的滚动事件数据。
+
+## 更新节奏
+
+- 每周五 18:00（北京时间）：校准未来一个月的事件。
+- 每月最后一个周一至周五工作日 19:00（北京时间）：铺设未来三个月。
+- 工作流也支持手动运行；首次部署会自动生成三个月数据。
+
+## 数据边界
+
+- 自动生成规则只产生 `historical_estimate`，不会伪装成官方日期。
+- 官方确认日期、已公布值和政策结果必须由相应官方适配器或人工审核写入。
+- `completed` 宏观数据必须含 `actualValue`。
+- 采用稳定事件 ID 合并，官方确认及已完成记录不会被预计规则覆盖。
+- 当前宏观数据候选日的“工作日”仍按周一至周五计算；官方公布日应以机构年度日历覆盖。
+
+## 市场休市日
+
+- 年度官方配置覆盖中国A股、美国、香港、日本和韩国市场。
+- 普通周末不重复生成事件；工作日休市、香港半日市及年终休市会写入 `calendar.json`。
+- 过往日期标为 `completed`，未来官方日期标为 `official_confirmed`。
+- 来源优先采用上海证券交易所、NYSE、香港交易所、Japan Exchange Group、Korea Exchange及韩国官方公休日历。
+- 每年交易所发布新年度日历后新增对应年份配置，不使用历史规律猜测法定休市日。
+
+## 文件
+
+- `calendar.json`：供网站读取的事件数据。
+- `status.json`：最近一次云端维护状态。
+- `update-calendar.mjs`：滚动窗口生成、合并与校验。
+- `.github/workflows/update-calendar.yml`：云端定时任务。
