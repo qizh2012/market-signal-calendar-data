@@ -1,0 +1,66 @@
+name: Update financial calendar
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "update-calendar.mjs"
+      - ".github/workflows/update-calendar.yml"
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: Rolling window
+        required: true
+        default: bootstrap
+        type: choice
+        options:
+          - bootstrap
+          - weekly
+          - month-end
+  schedule:
+    # Friday 18:00 Asia/Shanghai (GitHub cron uses UTC).
+    - cron: "0 10 * * 5"
+    # Check 25th-31st at 19:00 Asia/Shanghai; script runs only on the last weekday.
+    - cron: "0 11 25-31 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: financial-calendar-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      RUN_MODE: >-
+        ${{
+          github.event_name == 'push' && 'bootstrap' ||
+          github.event_name == 'workflow_dispatch' && inputs.scope ||
+          github.event.schedule == '0 10 * * 5' && 'weekly' ||
+          'month-end'
+        }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Refresh rolling calendar
+        run: node update-calendar.mjs
+
+      - name: Commit changed data
+        run: |
+          if git diff --quiet -- calendar.json status.json; then
+            echo "No data changes"
+            exit 0
+          fi
+          git config user.name "market-calendar-bot"
+          git config user.email "market-calendar-bot@users.noreply.github.com"
+          git add calendar.json status.json
+          git commit -m "chore(data): refresh rolling financial calendar"
+          git push
