@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-26T08:58:31.662Z",
+  "generatedAt": "2026-07-26T09:14:56.933Z",
   "mode": "bootstrap",
   "eventCount": 29,
-  "added": 29,
-  "updated": 0,
+  "added": 0,
+  "updated": 29,
   "windowStart": "2026-07-26",
   "windowEnd": "2026-10-26",
   "message": "云端滚动日历更新成功；预计事件仍等待官方确认。"
