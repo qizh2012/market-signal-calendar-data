@@ -1923,7 +1923,7 @@
       "非制造业PMI"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-official-pmi-2026-07",
     "seriesKey": "cn-official-pmi",
     "title": "中国7月官方PMI",
@@ -1958,7 +1958,7 @@
       "失业率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "us-nfp-2026-07",
     "seriesKey": "us-nfp",
     "title": "美国7月非农就业与失业率",
@@ -1993,7 +1993,7 @@
       "贸易差额"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-trade-2026-07",
     "seriesKey": "cn-trade",
     "title": "中国7月进出口与贸易差额",
@@ -2028,7 +2028,7 @@
       "通胀"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-cpi-ppi-2026-07",
     "seriesKey": "cn-cpi-ppi",
     "title": "中国7月CPI与PPI",
@@ -2099,7 +2099,7 @@
       "通胀"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "us-cpi-2026-07",
     "seriesKey": "us-cpi",
     "title": "美国7月CPI",
@@ -2136,7 +2136,7 @@
       "人民币贷款"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-credit-2026-07",
     "seriesKey": "cn-credit",
     "title": "中国7月金融统计与社融",
@@ -2210,7 +2210,7 @@
       "失业率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-activity-2026-07",
     "seriesKey": "cn-activity",
     "title": "中国7月经济运行数据",
@@ -2245,7 +2245,7 @@
       "贷款市场报价利率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-lpr-2026-08",
     "seriesKey": "cn-lpr",
     "title": "8月LPR报价",
@@ -2280,7 +2280,7 @@
       "交割日"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-index-futures-expiry-2026-08",
     "seriesKey": "cn-index-futures-expiry",
     "title": "8月A股股指期货交割日",
@@ -2313,7 +2313,7 @@
       "通胀"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-31T12:00:10.812Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "us-pce-2026-07",
     "seriesKey": "us-pce",
     "title": "美国7月PCE物价指数",
@@ -2348,7 +2348,7 @@
       "非制造业PMI"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-official-pmi-2026-08",
     "seriesKey": "cn-official-pmi",
     "title": "中国8月官方PMI",
@@ -2383,7 +2383,7 @@
       "失业率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "us-nfp-2026-08",
     "seriesKey": "us-nfp",
     "title": "美国8月非农就业与失业率",
@@ -2454,7 +2454,7 @@
       "贸易差额"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-trade-2026-08",
     "seriesKey": "cn-trade",
     "title": "中国8月进出口与贸易差额",
@@ -2489,7 +2489,7 @@
       "通胀"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-cpi-ppi-2026-08",
     "seriesKey": "cn-cpi-ppi",
     "title": "中国8月CPI与PPI",
@@ -2524,7 +2524,7 @@
       "通胀"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "us-cpi-2026-08",
     "seriesKey": "us-cpi",
     "title": "美国8月CPI",
@@ -2561,7 +2561,7 @@
       "人民币贷款"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-credit-2026-08",
     "seriesKey": "cn-credit",
     "title": "中国8月金融统计与社融",
@@ -2599,7 +2599,7 @@
       "失业率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-activity-2026-08",
     "seriesKey": "cn-activity",
     "title": "中国8月经济运行数据",
@@ -2634,7 +2634,7 @@
       "交割日"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-index-futures-expiry-2026-09",
     "seriesKey": "cn-index-futures-expiry",
     "title": "9月A股股指期货交割日",
@@ -2667,7 +2667,7 @@
       "贷款市场报价利率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-lpr-2026-09",
     "seriesKey": "cn-lpr",
     "title": "9月LPR报价",
@@ -2846,7 +2846,7 @@
       "通胀"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "us-pce-2026-08",
     "seriesKey": "us-pce",
     "title": "美国8月PCE物价指数",
@@ -2953,7 +2953,7 @@
       "非制造业PMI"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-official-pmi-2026-09",
     "seriesKey": "cn-official-pmi",
     "title": "中国9月官方PMI",
@@ -3060,7 +3060,7 @@
       "失业率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "us-nfp-2026-09",
     "seriesKey": "us-nfp",
     "title": "美国9月非农就业与失业率",
@@ -3275,7 +3275,7 @@
       "贸易差额"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-trade-2026-09",
     "seriesKey": "cn-trade",
     "title": "中国9月进出口与贸易差额",
@@ -3346,7 +3346,7 @@
       "通胀"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-cpi-ppi-2026-09",
     "seriesKey": "cn-cpi-ppi",
     "title": "中国9月CPI与PPI",
@@ -3381,7 +3381,7 @@
       "通胀"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "us-cpi-2026-09",
     "seriesKey": "us-cpi",
     "title": "美国9月CPI",
@@ -3454,7 +3454,7 @@
       "人民币贷款"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-credit-2026-09",
     "seriesKey": "cn-credit",
     "title": "中国9月金融统计与社融",
@@ -3492,7 +3492,7 @@
       "失业率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-activity-2026-09",
     "seriesKey": "cn-activity",
     "title": "中国9月经济运行数据",
@@ -3527,7 +3527,7 @@
       "交割日"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-index-futures-expiry-2026-10",
     "seriesKey": "cn-index-futures-expiry",
     "title": "10月A股股指期货交割日",
@@ -3596,7 +3596,7 @@
       "贷款市场报价利率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
     "id": "cn-lpr-2026-10",
     "seriesKey": "cn-lpr",
     "title": "10月LPR报价",
@@ -3614,6 +3614,41 @@
     "sourceUrl": "https://www.chinamoney.com.cn/",
     "sourceName": "全国银行间同业拆借中心",
     "description": "贷款市场报价利率。当前日期仅按历史规则推算，等待官方确认。"
+  },
+  {
+    "timezone": "America/New_York",
+    "dateStatus": "historical_estimate",
+    "sourceLevel": "official",
+    "actualValue": "",
+    "consensusValue": "",
+    "previousValue": "",
+    "revisionValue": "",
+    "outcomeSummary": "",
+    "marketReaction": "",
+    "frequency": "月度",
+    "tags": [
+      "PCE",
+      "通胀"
+    ],
+    "createdAt": "2026-07-31T12:54:54.147Z",
+    "updatedAt": "2026-07-31T12:54:54.147Z",
+    "id": "us-pce-2026-09",
+    "seriesKey": "us-pce",
+    "title": "美国9月PCE物价指数",
+    "category": "macro",
+    "countryOrRegion": "美国",
+    "publisher": "U.S. Bureau of Economic Analysis",
+    "scheduledDateTime": "2026-10-30T08:30:00-04:00",
+    "importance": "high",
+    "impactScope": [
+      "利率债",
+      "汇率",
+      "科技"
+    ],
+    "usualReleasePattern": "随个人收入与支出报告公布，必须以BEA日历为准。",
+    "sourceUrl": "https://www.bea.gov/news/schedule",
+    "sourceName": "BEA",
+    "description": "美联储重点关注的通胀指标。"
   },
   {
     "timezone": "Asia/Tokyo",
