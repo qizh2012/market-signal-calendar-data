@@ -4,6 +4,7 @@ import path from "node:path";
 const root = path.resolve(import.meta.dirname);
 const calendarPath = path.join(root, "calendar.json");
 const statusPath = path.join(root, "status.json");
+const verifiedBackfillPath = path.join(root, "verified-backfill-2026.json");
 const mode = process.env.RUN_MODE || "bootstrap";
 const now = new Date();
 const shanghaiNow = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Shanghai" }));
@@ -394,6 +395,9 @@ function monthlyEvents(year, month) {
 }
 
 const existing = JSON.parse(fs.readFileSync(calendarPath, "utf8"));
+const verifiedBackfill = fs.existsSync(verifiedBackfillPath)
+  ? JSON.parse(fs.readFileSync(verifiedBackfillPath, "utf8"))
+  : [];
 const horizonMonths = mode === "weekly" ? 1 : 3;
 const windowStart = new Date(shanghaiNow.getFullYear(), shanghaiNow.getMonth(), shanghaiNow.getDate());
 const windowEnd = new Date(windowStart);
@@ -448,6 +452,28 @@ for (const candidate of officialMarketHolidays) {
   mergeCandidate(candidate);
 }
 
+const verifiedIds = new Set();
+for (const record of verifiedBackfill) {
+  if (verifiedIds.has(record.id)) throw new Error(`Duplicate verified backfill id: ${record.id}`);
+  verifiedIds.add(record.id);
+  if (record.dateStatus !== "completed") {
+    throw new Error(`Verified backfill must be completed: ${record.id}`);
+  }
+  if (!["official", "authoritative_media"].includes(record.sourceLevel)) {
+    throw new Error(`Verified backfill source is not allowed: ${record.id}`);
+  }
+  if (!record.sourceUrl || !record.sourceName) {
+    throw new Error(`Verified backfill source is missing: ${record.id}`);
+  }
+  if (record.category === "macro" && !record.actualValue) {
+    throw new Error(`Verified macro backfill missing actualValue: ${record.id}`);
+  }
+  const current = byId.get(record.id);
+  if (!current) added += 1;
+  else if (JSON.stringify(current) !== JSON.stringify(record)) updated += 1;
+  byId.set(record.id, record);
+}
+
 const events = [...byId.values()].sort((a, b) => a.scheduledDateTime.localeCompare(b.scheduledDateTime));
 const ids = new Set();
 for (const event of events) {
@@ -470,7 +496,8 @@ fs.writeFileSync(statusPath, `${JSON.stringify({
   updated,
   windowStart: dateOnly(windowStart),
   windowEnd: dateOnly(windowEnd),
-  message: "云端滚动日历更新成功；预计事件仍等待官方确认。",
+  verifiedBackfillCount: verifiedBackfill.length,
+  message: `云端滚动日历更新成功；已合并 ${verifiedBackfill.length} 条已核验历史记录，预计事件仍等待官方确认。`,
 }, null, 2)}\n`);
 
 console.log(`Updated ${events.length} events: ${added} added, ${updated} refreshed.`);
