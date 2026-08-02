@@ -12,6 +12,8 @@
 
 - 自动生成规则只产生 `historical_estimate`，不会伪装成官方日期。
 - 官方确认日期、已公布值和政策结果必须由相应官方适配器或人工审核写入。
+- 已公布数据和已发生事件按主题维护在 `verified-backfill-*.json`，每次滚动更新后最后合并，防止实际值被预计规则覆盖。
+- 回填层只接受 `official` 或 `authoritative_media` 来源；市场传闻不得进入已完成记录。
 - `completed` 宏观数据必须含 `actualValue`。
 - 采用稳定事件 ID 合并，官方确认及已完成记录不会被预计规则覆盖。
 - 当前宏观数据候选日的“工作日”仍按周一至周五计算；官方公布日应以机构年度日历覆盖。
@@ -27,6 +29,7 @@
 ## 文件
 
 - `calendar.json`：供网站读取的事件数据。
+- `verified-backfill-*.json`：当前年度人工核验的实际值、央行决议和已发生政策/国际事件；可按年度或主题拆分文件。
 - `status.json`：最近一次云端维护状态。
 - `update-calendar.mjs`：滚动窗口生成、合并与校验。
 - `.github/workflows/update-calendar.yml`：云端定时任务。
