@@ -1,11 +1,15 @@
 {
-  "generatedAt": "2026-08-02T07:44:40.893Z",
+  "generatedAt": "2026-08-02T08:34:05.245Z",
   "mode": "bootstrap",
-  "eventCount": 128,
-  "added": 16,
+  "eventCount": 158,
+  "added": 30,
   "updated": 23,
   "windowStart": "2026-08-02",
   "windowEnd": "2026-11-02",
-  "verifiedBackfillCount": 16,
-  "message": "云端滚动日历更新成功；已合并 16 条已核验历史记录，预计事件仍等待官方确认。"
+  "verifiedBackfillCount": 46,
+  "verifiedBackfillFiles": [
+    "verified-backfill-2026-ytd-core.json",
+    "verified-backfill-2026.json"
+  ],
+  "message": "云端滚动日历更新成功；已合并 46 条已核验历史记录，预计事件仍等待官方确认。"
 }
