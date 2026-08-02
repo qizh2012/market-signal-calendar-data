@@ -4,7 +4,10 @@ import path from "node:path";
 const root = path.resolve(import.meta.dirname);
 const calendarPath = path.join(root, "calendar.json");
 const statusPath = path.join(root, "status.json");
-const verifiedBackfillPath = path.join(root, "verified-backfill-2026.json");
+const verifiedBackfillPaths = fs.readdirSync(root)
+  .filter((name) => /^verified-backfill-.*\.json$/.test(name))
+  .sort()
+  .map((name) => path.join(root, name));
 const mode = process.env.RUN_MODE || "bootstrap";
 const now = new Date();
 const shanghaiNow = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Shanghai" }));
@@ -395,9 +398,9 @@ function monthlyEvents(year, month) {
 }
 
 const existing = JSON.parse(fs.readFileSync(calendarPath, "utf8"));
-const verifiedBackfill = fs.existsSync(verifiedBackfillPath)
-  ? JSON.parse(fs.readFileSync(verifiedBackfillPath, "utf8"))
-  : [];
+const verifiedBackfill = verifiedBackfillPaths.flatMap((file) =>
+  JSON.parse(fs.readFileSync(file, "utf8")),
+);
 const horizonMonths = mode === "weekly" ? 1 : 3;
 const windowStart = new Date(shanghaiNow.getFullYear(), shanghaiNow.getMonth(), shanghaiNow.getDate());
 const windowEnd = new Date(windowStart);
@@ -497,6 +500,7 @@ fs.writeFileSync(statusPath, `${JSON.stringify({
   windowStart: dateOnly(windowStart),
   windowEnd: dateOnly(windowEnd),
   verifiedBackfillCount: verifiedBackfill.length,
+  verifiedBackfillFiles: verifiedBackfillPaths.map((file) => path.basename(file)),
   message: `云端滚动日历更新成功；已合并 ${verifiedBackfill.length} 条已核验历史记录，预计事件仍等待官方确认。`,
 }, null, 2)}\n`);
 
