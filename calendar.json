@@ -3975,7 +3975,7 @@
       "贷款市场报价利率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-08-02T08:42:11.831Z",
+    "updatedAt": "2026-08-07T10:52:25.820Z",
     "id": "cn-lpr-2026-08",
     "seriesKey": "cn-lpr",
     "title": "8月LPR报价",
@@ -4010,7 +4010,7 @@
       "交割日"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-08-02T08:42:11.831Z",
+    "updatedAt": "2026-08-07T10:52:25.820Z",
     "id": "cn-index-futures-expiry-2026-08",
     "seriesKey": "cn-index-futures-expiry",
     "title": "8月A股股指期货交割日",
@@ -4078,7 +4078,7 @@
       "非制造业PMI"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-08-02T08:42:11.831Z",
+    "updatedAt": "2026-08-07T10:52:25.820Z",
     "id": "cn-official-pmi-2026-08",
     "seriesKey": "cn-official-pmi",
     "title": "中国8月官方PMI",
@@ -4113,7 +4113,7 @@
       "失业率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-08-02T08:42:11.831Z",
+    "updatedAt": "2026-08-07T10:52:25.820Z",
     "id": "us-nfp-2026-08",
     "seriesKey": "us-nfp",
     "title": "美国8月非农就业与失业率",
