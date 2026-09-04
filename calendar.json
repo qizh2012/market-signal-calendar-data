@@ -4364,7 +4364,7 @@
       "交割日"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-08-28T21:07:11.721Z",
+    "updatedAt": "2026-09-04T14:02:02.794Z",
     "id": "cn-index-futures-expiry-2026-09",
     "seriesKey": "cn-index-futures-expiry",
     "title": "9月A股股指期货交割日",
@@ -4397,7 +4397,7 @@
       "贷款市场报价利率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-08-28T21:07:11.721Z",
+    "updatedAt": "2026-09-04T14:02:02.794Z",
     "id": "cn-lpr-2026-09",
     "seriesKey": "cn-lpr",
     "title": "9月LPR报价",
@@ -4683,7 +4683,7 @@
       "非制造业PMI"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-08-02T08:42:11.831Z",
+    "updatedAt": "2026-09-04T14:02:02.794Z",
     "id": "cn-official-pmi-2026-09",
     "seriesKey": "cn-official-pmi",
     "title": "中国9月官方PMI",
@@ -4790,7 +4790,7 @@
       "失业率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-08-02T08:42:11.831Z",
+    "updatedAt": "2026-09-04T14:02:02.794Z",
     "id": "us-nfp-2026-09",
     "seriesKey": "us-nfp",
     "title": "美国9月非农就业与失业率",
