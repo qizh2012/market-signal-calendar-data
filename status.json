@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-04T14:02:02.794Z",
+  "generatedAt": "2026-09-11T14:05:12.734Z",
   "mode": "weekly",
   "eventCount": 158,
   "added": 0,
-  "updated": 4,
-  "windowStart": "2026-09-04",
-  "windowEnd": "2026-10-04",
+  "updated": 7,
+  "windowStart": "2026-09-11",
+  "windowEnd": "2026-10-11",
   "verifiedBackfillCount": 46,
   "verifiedBackfillFiles": [
     "verified-backfill-2026-ytd-core.json",
