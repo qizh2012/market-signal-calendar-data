@@ -4704,13 +4704,13 @@
   },
   {
     "timezone": "Asia/Shanghai",
-    "dateStatus": "official_confirmed",
+    "dateStatus": "completed",
     "sourceLevel": "official",
     "actualValue": "",
     "consensusValue": "",
     "previousValue": "",
     "revisionValue": "",
-    "outcomeSummary": "",
+    "outcomeSummary": "2026-10-01 A股全天休市。",
     "marketReaction": "",
     "id": "market-holiday-china-2026-10-01-closed",
     "seriesKey": "market-holiday-china",
@@ -4736,17 +4736,17 @@
       "交易所日历"
     ],
     "createdAt": "2026-07-26T13:01:05.635Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z"
+    "updatedAt": "2026-10-02T16:07:19.202Z"
   },
   {
     "timezone": "Asia/Hong_Kong",
-    "dateStatus": "official_confirmed",
+    "dateStatus": "completed",
     "sourceLevel": "official",
     "actualValue": "",
     "consensusValue": "",
     "previousValue": "",
     "revisionValue": "",
-    "outcomeSummary": "",
+    "outcomeSummary": "2026-10-01 港股全天休市。",
     "marketReaction": "",
     "id": "market-holiday-hong_kong-2026-10-01-closed",
     "seriesKey": "market-holiday-hong_kong",
@@ -4772,7 +4772,7 @@
       "交易所日历"
     ],
     "createdAt": "2026-07-26T13:01:05.635Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z"
+    "updatedAt": "2026-10-02T16:07:19.202Z"
   },
   {
     "timezone": "America/New_York",
@@ -4811,13 +4811,13 @@
   },
   {
     "timezone": "Asia/Shanghai",
-    "dateStatus": "official_confirmed",
+    "dateStatus": "completed",
     "sourceLevel": "official",
     "actualValue": "",
     "consensusValue": "",
     "previousValue": "",
     "revisionValue": "",
-    "outcomeSummary": "",
+    "outcomeSummary": "2026-10-02 A股全天休市。",
     "marketReaction": "",
     "id": "market-holiday-china-2026-10-02-closed",
     "seriesKey": "market-holiday-china",
@@ -4843,7 +4843,7 @@
       "交易所日历"
     ],
     "createdAt": "2026-07-26T13:01:05.635Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z"
+    "updatedAt": "2026-10-02T16:07:19.202Z"
   },
   {
     "timezone": "Asia/Shanghai",
@@ -5257,7 +5257,7 @@
       "交割日"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-09-29T16:47:50.040Z",
+    "updatedAt": "2026-10-02T16:07:19.202Z",
     "id": "cn-index-futures-expiry-2026-10",
     "seriesKey": "cn-index-futures-expiry",
     "title": "10月A股股指期货交割日",
@@ -5326,7 +5326,7 @@
       "贷款市场报价利率"
     ],
     "createdAt": "2026-07-26T08:58:31.662Z",
-    "updatedAt": "2026-09-29T16:47:50.040Z",
+    "updatedAt": "2026-10-02T16:07:19.202Z",
     "id": "cn-lpr-2026-10",
     "seriesKey": "cn-lpr",
     "title": "10月LPR报价",
@@ -5396,7 +5396,7 @@
       "非制造业PMI"
     ],
     "createdAt": "2026-08-02T07:44:40.893Z",
-    "updatedAt": "2026-09-29T16:47:50.040Z",
+    "updatedAt": "2026-10-02T16:07:19.202Z",
     "id": "cn-official-pmi-2026-10",
     "seriesKey": "cn-official-pmi",
     "title": "中国10月官方PMI",
