@@ -5417,13 +5417,13 @@
   },
   {
     "timezone": "Asia/Tokyo",
-    "dateStatus": "official_confirmed",
+    "dateStatus": "completed",
     "sourceLevel": "official",
     "actualValue": "",
     "consensusValue": "",
     "previousValue": "",
     "revisionValue": "",
-    "outcomeSummary": "",
+    "outcomeSummary": "2026-11-03 JPX现金市场休市；部分衍生品可能另有假日交易安排，请查看JPX产品日历。",
     "marketReaction": "",
     "id": "market-holiday-japan-2026-11-03-closed",
     "seriesKey": "market-holiday-japan",
@@ -5449,7 +5449,7 @@
       "交易所日历"
     ],
     "createdAt": "2026-07-26T13:01:05.635Z",
-    "updatedAt": "2026-07-26T13:01:05.635Z"
+    "updatedAt": "2026-11-06T17:12:57.903Z"
   },
   {
     "timezone": "America/New_York",
@@ -5682,7 +5682,7 @@
       "贷款市场报价利率"
     ],
     "createdAt": "2026-09-29T16:47:50.040Z",
-    "updatedAt": "2026-10-30T16:32:52.708Z",
+    "updatedAt": "2026-11-06T17:12:57.903Z",
     "id": "cn-lpr-2026-11",
     "seriesKey": "cn-lpr",
     "title": "11月LPR报价",
@@ -5717,7 +5717,7 @@
       "交割日"
     ],
     "createdAt": "2026-09-29T16:47:50.040Z",
-    "updatedAt": "2026-10-30T16:32:52.708Z",
+    "updatedAt": "2026-11-06T17:12:57.903Z",
     "id": "cn-index-futures-expiry-2026-11",
     "seriesKey": "cn-index-futures-expiry",
     "title": "11月A股股指期货交割日",
@@ -5857,7 +5857,7 @@
       "非制造业PMI"
     ],
     "createdAt": "2026-09-29T16:47:50.040Z",
-    "updatedAt": "2026-10-30T16:32:52.708Z",
+    "updatedAt": "2026-11-06T17:12:57.903Z",
     "id": "cn-official-pmi-2026-11",
     "seriesKey": "cn-official-pmi",
     "title": "中国11月官方PMI",
@@ -5892,7 +5892,7 @@
       "失业率"
     ],
     "createdAt": "2026-09-29T16:47:50.040Z",
-    "updatedAt": "2026-10-29T17:18:47.781Z",
+    "updatedAt": "2026-11-06T17:12:57.903Z",
     "id": "us-nfp-2026-11",
     "seriesKey": "us-nfp",
     "title": "美国11月非农就业与失业率",
